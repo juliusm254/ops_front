@@ -17,7 +17,9 @@ const actions = {
   async actionLogin(context, payload, config) {
     const response = await axios
 
-      .post("/login/", payload, config, {
+  // /api/v1/radius/organization/<organization-slug>/account/
+
+      .post("/api/v1/freeradius/authorize/", payload, config, {
         withCredentials: true,
         credentials: "include",
       })
